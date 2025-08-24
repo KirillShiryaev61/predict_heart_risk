@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css';
 
 const App = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -8,7 +9,7 @@ const App = () => {
   const [error, setError] = useState('');
 
   const steps = [
-    { key: 'heart_rate', label: 'Какая частота сердечных сокращений?', type: 'number', min: 0, max: 1, unit: 'уд/мин' },
+    { key: 'heart_rate', label: 'Какая частота сердечных сокращений? (уд/мин)', type: 'number', min: 0, max: 1 },
     { key: 'diabetes', label: 'У вас есть сахарный диабет?', type: 'boolean' },
     { key: 'family_history', label: 'Были ли у родственников проблемы с сердцем?', type: 'boolean' },
     { key: 'obesity', label: 'Страдаете ли вы ожирением?', type: 'boolean' },
@@ -18,7 +19,7 @@ const App = () => {
     { key: 'medication_use', label: 'Вы принимаете лекарства?', type: 'boolean' },
     { key: 'stress_level', label: 'Оцените свой уровень стресса от 1 до 10', type: 'slider', min: 1, max: 10 },
     { key: 'sedentary_hours_per_day', label: 'Сколько часов в день вы проводите сидя?', type: 'number', min: 0, max: 1 },
-    { key: 'income', label: 'Ваш доход в месяц', type: 'number', min: 0, max: 1, unit: 'руб.' },
+    { key: 'income', label: 'Ваш доход в месяц (руб.)', type: 'number', min: 0, max: 1 },
     { key: 'bmi', label: 'Ваш ИМТ (Индекс массы тела)', type: 'number', min: 0, max: 1 },
     { key: 'triglycerides', label: 'Ваш уровень триглицеридов', type: 'number', min: 0, max: 1 },
     { key: 'physical_activity_days_per_week', label: 'Количество дней с физической нагрузкой в неделю', type: 'slider', min: 0, max: 7 },
@@ -167,9 +168,6 @@ const App = () => {
                   <p className="input-help">
                     Введите значение от {steps[currentStep].min} до {steps[currentStep].max}
                   </p>
-                  {steps[currentStep].unit && (
-                    <p className="unit">({steps[currentStep].unit})</p>
-                  )}
                 </div>
               )}
 
@@ -227,7 +225,7 @@ const App = () => {
 
               {steps[currentStep].type === 'gender' && (
                 <div className="boolean-input">
-                  <p className="input-help">Выберите пол:</p>
+                  <p className="input-help">Выберите один из вариантов:</p>
                   <div className="button-grid">
                     <button
                       onClick={() => handleChange('1')}
