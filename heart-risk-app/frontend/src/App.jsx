@@ -133,7 +133,7 @@ const App = () => {
     <div className="app-container">
       <div className="form-wrapper">
         <div className="header">
-          <h1 className="title">Система прогнозирования риска</h1>
+          <h1 className="title">Оценка риска сердечного приступа</h1>
           <p className="subtitle">Введите данные пошагово для оценки риска</p>
         </div>
 
@@ -285,7 +285,7 @@ const App = () => {
                 : 'Риск сердечно-сосудистых заболеваний находится в пределах нормы'}
             </p>
             <p className="result-confidence">
-              Уверенность прогноза: <strong>{prediction.confidence}</strong>
+              Вероятность сердечного приступа: <strong>{prediction.confidence}</strong>
             </p>
             <div className="button-group">
               <button

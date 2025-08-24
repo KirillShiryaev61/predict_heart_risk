@@ -282,8 +282,8 @@ body {
 }
 
 .wide-button {
-  flex: 1;           /* Занимает всё доступное пространство */
-  min-width: 120px;  /* Минимальная ширина */
+  flex: 1;
+  min-width: 120px;  
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 14px;
@@ -291,11 +291,11 @@ body {
   transition: all 0.2s;
 }
 
-/* Для первоначального отображения */
+
 .button-group {
   display: flex;
   gap: 12px;
   justify-content: center;
   margin-top: 32px;
-  width: 100%; /* Чтобы кнопки занимали всю ширину */
+  width: 100%;
 }

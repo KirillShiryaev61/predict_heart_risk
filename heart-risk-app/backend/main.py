@@ -7,7 +7,7 @@ import os
 from fastapi.middleware.cors import CORSMiddleware
 
 # Инициализация приложения
-app = FastAPI(title='eart Risk Predictor API', version='1.0')
+app = FastAPI(title='Heart Risk Predictor API', version='1.0')
 
 # Путь к модели
 MODEL_PATH = 'catboost.cbm'
