@@ -39,7 +39,7 @@ python -m venv venv
 
 > Активация виртуального окружения:
 > - **macOS/Linux**: `source venv/bin/activate`
-> - **Windows**: `venv\Scripts\activate```
+> - **Windows**: `venv\Scripts\activate`
 
 
 ```
